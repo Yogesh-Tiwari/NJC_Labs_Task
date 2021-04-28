@@ -29,7 +29,6 @@ public class StudentDao {
 	}
 	
 	//get the single data object
-	//no need for @Transactional annotation when not writing into database
 	public Student getStudent(int studentId) {
 		Student student = this.hibernateTemplate.get(Student.class, studentId);
 		return student;
